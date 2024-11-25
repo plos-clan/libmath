@@ -1,0 +1,21 @@
+[package]
+name = "libmath"
+edition = "2021"
+
+[lib]
+name = "math"
+crate-type = ["staticlib"]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3
+strip = true
+codegen-units = 1
+
+[dependencies.libm]
+version = "0.2.11"
+features = ["force-soft-floats"]
