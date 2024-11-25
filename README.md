@@ -1,4 +1,4 @@
-# liballoc
+# libmath
 
 C binding of `libm` crate for x86 or x86_64 OS, using pure soft-float without SSE or AVX.
 
